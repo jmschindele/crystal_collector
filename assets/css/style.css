@@ -1,0 +1,40 @@
+div {
+    border: 1px solid red;
+}
+
+.overflow-auto {
+    overflow: auto;
+    max-height: 65px;
+}
+
+.col-md-6 {
+    border: 1px solid blue;
+}
+
+.h1 {
+    font-size: 60px;
+    margin: 0;
+    padding: 10px;
+}
+.h2 {
+    font-size: 18px;
+    font-family: "Helvetica Neue";
+    font-weight: normal;
+    margin: 0;
+    padding: 5px;
+    
+}
+
+img {
+    height: 200px;
+    width: auto;
+    margin: 15px;
+}
+
+#first-img {
+    margin-left: 30px;
+}
+
+#last-image {
+    margin-right: 30px;
+}
