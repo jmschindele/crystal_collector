@@ -17,53 +17,67 @@
     <link href="assets/css/style.css" type="text/css" rel="stylesheet" />
     <!-- link jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- link fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Permanent+Marker" rel="stylesheet">
     <title>Crystal Game</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container vertical-center">
       <div class="row">
-        <div class="col-lg-12 h1 text-center">Crystals Collector!</div>
+        <div class="col-lg-12 h1 text-center">Crystal Collector!</div>
       </div>
       <div class="row">
-        <div class="col-lg-12 overflow-auto h2">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nemo
-          libero, quo architecto earum obcaecati ex. Adipisci illo rem ab, magni
-          ducimus ea voluptatem saepe laborum veritatis, voluptate, aspernatur
-          praesentium.
+        <div class="col-lg-12 overflow-auto h2" id="custom-scroll">
+            <ul><p>How to play:</p>
+                <li>You will be given a random number at the start of the game.</li>
+                <li>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</li>
+                <li>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</li>
+                <li>The value of each crystal is hidden from you until you click on it.
+                </li>
+                <li>Each time the game starts, the values of each crystal will change.</li>
+            </ul>
+
         </div>
+      </div>
+      <div class="row text-center" id="win-loss-banner">
+        <div class="col-sm-6 green-gradient">
+          <div class="row" id="total-box">
+            <div class="col-sm-12 h3">Total</div>
+            <div class="col-sm-12 tally">
+            <p id="total-score">0</p></div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="row" id="goal-box">
+            <div class="col-sm-12 h3">Goal</div>
+            <div class="col-sm-12 tally"><p id="goal-score">0</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center centerizer">
+        <div class="col-sm-3"><img src="assets/images/gem1.jpg" alt="crystal1" id="gem1"/></div>
+        <div class="col-sm-3"><img src="assets/images/gem2.jpg" alt="crystal2" id="gem2"/></div>
+        <div class="col-sm-3"><img src="assets/images/gem3.jpg" alt="crystal3" id="gem3"/></div>
+        <div class="col-sm-3"><img src="assets/images/gem4.jpg" alt="crystal4" id="gem4"/></div>
+        
       </div>
       <div class="row text-center">
-        <div class="col-sm-6">
+          <div class="col-sm-1"></div>
+        <div class="col-sm-4">
           <div class="row">
-            <div class="col-sm-12">Goal</div>
-            <div class="col-sm-12">49</div>
+            <div class="col-sm-12 h3">Wins</div>
+            <div class="col-sm-12 tally" id="win">0</div>
           </div>
         </div>
-        <div class="col-sm-6">
-          <div class="row">
-            <div class="col-sm-12">Current</div>
-            <div class="col-sm-12">49</div>
-          </div>
+        <div class="col-sm-2">
+            <p id="win-loss"></p>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3"><img src="#" alt="crystal1" id="first-image"/></div>
-        <div class="col-sm-3"><img src="#" alt="crystal2" /></div>
-        <div class="col-sm-3"><img src="#" alt="crystal3" /></div>
-        <div class="col-sm-3"><img src="#" alt="crystal4" id="last-image"/></div>
-      </div>
-      <div class="row text-center">
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <div class="row">
-            <div class="col-sm-12">Wins</div>
-            <div class="col-sm-12">0</div>
+            <div class="col-sm-12 h3">Losses</div>
+            <div class="col-sm-12 tally" id="lose">0</div>
           </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="row">
-            <div class="col-sm-12">Losses</div>
-            <div class="col-sm-12">0</div>
-          </div>
+          <div class="col-sm-1"></div>
         </div>
       </div>
     </div>
